@@ -1,12 +1,12 @@
 {
   "name": "ainft-factory-discord-bot",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "main": "index.js",
   "repository": "git@bitbucket.org:comcomai/ainft-factory-discord-bot.git",
   "author": "hyeonwoong <hyeonwoong@comcom.ai>",
   "license": "MIT",
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=16.6.0"
   },
   "scripts": {
     "dev": "ts-node-dev ./src/index.ts"
