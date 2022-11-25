@@ -4,6 +4,20 @@ const SupportedLanguages: {[key: string]: boolean} = {
 }
 
 const helpMessages: {[type: string]: {[locale: string]: string}} = {
+  app: {
+    ko: '```사용법:\n' +
+      '<>에 확인하고자 하는 값을 입력하여 데이터를 볼 수 있습니다.\n' +
+      '  •  /app connect <appId>\n' +
+      '        해당 디스코드 서버를 app과 연결합니다. 연결정보가 있어야 event 등의 정보를 불러올 수 있습니다. 예시) /app connnect my_app\n' +
+      '  •  /app help [<language>]\n' +
+      '        app에 관한 안내 메세지를 확인하는 기능입니다.```',
+    en: '```Usage:\n' +
+      'You need to enter the values you want to check in the <> parentheses.\n' +
+      '  •  /app connect <appId>\n' +
+      '        Connect the Discord server with the app. Information such as events can be called only when connected. e.g. /app connnect my_app\n' +
+      '  •  /app help [<language>]\n' +
+      '        Display this message.```',
+  },
   credit: {
     ko: '```사용법:\n' +
       '<>에 확인하고자 하는 값을 입력하여 데이터를 볼 수 있습니다.\n' +
@@ -48,32 +62,28 @@ const helpMessages: {[type: string]: {[locale: string]: string}} = {
   },
   general: {
     ko: '```사용법:\n' +
+      '  •  /app <subcommand>\n' +
+      '        App 관련 커멘드들입니다. /app help 커멘드를 통해 더 자세한 내용을 확인할 수 있습니다.\n' +
       '  •  /credit <subcommand>\n' +
       '        App credit 관련 커멘드들입니다. /credit help 커멘드를 통해 더 자세한 내용을 확인할 수 있습니다.\n' +
       '  •  /event <subcommand>\n' +
       '        Tokenomics events 관련 커멘드들입니다. /event help 커멘드를 통해 더 자세한 내용을 확인할 수 있습니다.\n' +
-      '  •  /inventory <subcommand>\n' +
-      '        Item inventory 관련 커멘드들입니다. /inventory help 커멘드를 통해 더 자세한 내용을 확인할 수 있습니다.\n' +
-      '  •  /nft <subcommand>\n' +
-      '        NFT 관련 커멘드들입니다. /nft help 커멘드를 통해 더 자세한 내용을 확인할 수 있습니다.\n' +
-      '  •  /store <subcommand>\n' +
-      '        Item store 관련 커멘드들입니다. /store help 커멘드를 통해 더 자세한 내용을 확인할 수 있습니다.\n' +
       '  •  /help [<language>]\n' +
       '        AINFT Factory 전체 커멘드를 확인하는 기능입니다.```',
     en: '```Usage: \n' +
+      '  •  /app <subcommand>\n' +
+      '        Commands regarding app. Use /app help for more info on the subcommands.\n' +
       '  •  /credit <subcommand>\n' +
       '        Commands regarding app credits. Use /credit help for more info on the subcommands.\n' +
       '  •  /event <subcommand>\n' +
       '        Commands regarding the tokenomics events. Use /event help for more info on the subcommands.\n' +
-      '  •  /inventory <subcommand>\n' +
-      '        Commands regarding item inventory. Use /inventory help for more info on the subcommands.\n' +
-      '  •  /nft <subcommand>\n' +
-      '        Commands regarding NFTs. Use /nft help for more info on the subcommands.\n' +
-      '  •  /store <subcommand>\n' +
-      '        Commands regarding item store. Use /store help for more info on the subcommands.\n' +
       '  •  /help [<language>]\n' +
       '        Display this message.```',
   },
+}
+
+export const getAppHelpMessage = (language: string = 'en') => {
+  return helpMessages.app[SupportedLanguages[language] !== true ? 'en' : language];
 }
 
 export const getCreditHelpMessage = (language: string = 'en') => {
