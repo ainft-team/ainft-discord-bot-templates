@@ -1,6 +1,6 @@
 import { MessageReaction, PartialMessageReaction, TextChannel, User } from 'discord.js';
 import { NO_EVENT_TASK_CONFIG_AT_CHANNEL } from '../common/constants';
-import { AinftFactory } from '../services/AinftFactory';
+import { AinftFactory } from '../services/ainftFactory';
 import { isAdmin } from '../utils';
 import { isAinftJsError } from '../utils/error';
 

@@ -13,7 +13,7 @@ import {
 import * as commandHandlers from './commands';
 import * as eventHandlers from './events';
 import { IDiscordCommand, IDiscordSubCommand } from './types';
-import { AinftFactory } from './services/AinftFactory';
+import { AinftFactory } from './services/ainftFactory';
 
 const { DISCORD_TOKEN } = process.env;
 

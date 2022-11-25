@@ -1,7 +1,7 @@
 import Command from '../command';
 import createCommand from './create';
 import rewardCommand from './reward';
-import pendingRewardsCommand from './pending-rewards';
+import pendingRewardsCommand from './pendingRewards';
 import helpCommand from './help';
 import historyCommand from './history';
 

@@ -1,4 +1,4 @@
-import { AinftFactory } from "../services/AinftFactory";
+import { AinftFactory } from "../services/ainftFactory";
 import { IExecuteProps } from "../types";
 
 export const interactionCreate = () => {

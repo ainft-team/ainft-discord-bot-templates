@@ -1,7 +1,7 @@
 import { CommandInteraction, MessageComponentInteraction } from 'discord.js';
 import { SlashCommandBuilder } from '@discordjs/builders';
 import { IDiscordSubCommand } from '../../types';
-import { AinftFactory } from '../../services/AinftFactory';
+import { AinftFactory } from '../../services/ainftFactory';
 import {
   getPagingMessageActionRow,
   getPagingMessageEmbed,

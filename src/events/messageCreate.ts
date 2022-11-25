@@ -1,5 +1,5 @@
 import { Message } from 'discord.js';
-import { AinftFactory } from '../services/AinftFactory';
+import { AinftFactory } from '../services/ainftFactory';
 
 export const messageCreate = () => ({
   name: 'messageCreate',

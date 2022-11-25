@@ -1,6 +1,6 @@
 import { CommandInteraction, User } from 'discord.js';
 import { SlashCommandBuilder } from '@discordjs/builders';
-import { AinftFactory } from '../../services/AinftFactory';
+import { AinftFactory } from '../../services/ainftFactory';
 import { isAdmin, isAinftJsError } from '../../utils';
 
 const giveCommand = {

@@ -1,6 +1,6 @@
 import { CommandInteraction } from 'discord.js';
 import { SlashCommandBuilder } from '@discordjs/builders';
-import { AinftFactory } from '../../services/AinftFactory';
+import { AinftFactory } from '../../services/ainftFactory';
 
 const balanceCommand = {
   name: 'balance',

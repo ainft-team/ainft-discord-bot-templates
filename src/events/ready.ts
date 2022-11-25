@@ -1,5 +1,5 @@
 import { Client } from 'discord.js';
-import { AinftFactory } from '../services/AinftFactory';
+import { AinftFactory } from '../services/ainftFactory';
 import { TaskConfig } from '../types';
 
 export const ready = () => {

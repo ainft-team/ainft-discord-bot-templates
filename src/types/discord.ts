@@ -4,7 +4,7 @@ import {
   SlashCommandBuilder,
   SlashCommandSubcommandsOnlyBuilder,
 } from '@discordjs/builders';
-import { AinftFactory } from '../services/AinftFactory';
+import { AinftFactory } from '../services/ainftFactory';
 
 export type IExecuteFunc =
   (interaction: CommandInteraction, ainftFactory?: AinftFactory) => Promise<any>;
