@@ -24,7 +24,7 @@ const main = async () => {
   const stage = process.argv[2];
   const appId = process.argv[3];
   const userId = process.argv[4];
-  const privateKey = process.argv[5];
+  const accessKey = process.argv[5];
 
   if (stage !== 'DEV' && stage !== 'PROD') {
     console.log('stage must be in DEV or PROD.');
@@ -32,7 +32,7 @@ const main = async () => {
   }
 
   const ainftJs = new AinftJs(
-    privateKey,
+    accessKey,
     ainftServerEndpoint[stage],
     ainBlockchainEndpoint[stage],
     ainBlockchainChainId[stage]
@@ -50,7 +50,7 @@ const main = async () => {
 
 const usage = () => {
   console.log(
-    '\nUsage: node create-ainft-server-app.js <DEV | PROD> <APP ID> <USER ID> <PRIVATE_KEY>\n'
+    '\nUsage: node create-ainft-server-app.js <DEV | PROD> <APP ID> <USER ID> <ACCESS_KEY>\n'
   );
   console.log(
     '<DEV | PROD>: It means stage. dev connects to testnet, prod connects to mainnet.'
@@ -64,7 +64,8 @@ const usage = () => {
       'It is recommended to use the userId of the place where ainft-js is used.'
   );
   console.log(
-    '<PRIVATE_KEY>: It means ain blockchain private key. The private key should be kept safe to be used for accessing AINFT Server APIs with the app id\n'
+    '<ACCESS_KEY>: It means ain blockchain private key. The private key should be kept safe to be used for accessing AINFT Server APIs with the app id.' + 
+    'If you don\'t have access key, use createAccessKey.js script.\n'
   );
   console.log(
     'Example: node create-ainft-server-app.js DEV new_app myUserId ' +
