@@ -4,7 +4,7 @@ This is an ainft factory discord bot template that supports simple features rela
 ## Requirements
 - node >= 16.6
 - ainft server app  
-  - If you do not have the nft server app, go to [tools/create_ainft_server_app](https://github.com/ainft-team/ainft-discord-bot-templates/tools/create_ainft_server_app).
+  - If you do not have the nft server app, run [tools/create-ainft-server-app.js](https://github.com/ainft-team/ainft-discord-bot-templates/blob/main/tools/create-ainft-server-app.js).
 
 ## Environments
 - DISCORD_TOKEN
