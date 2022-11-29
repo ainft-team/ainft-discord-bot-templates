@@ -17,36 +17,18 @@ const ainBlockchainChainId = {
 };
 
 const main = async () => {
-  if (process.argv.length < 5) {
+  if (process.argv.length < 6) {
     usage();
   }
 
   const stage = process.argv[2];
   const appId = process.argv[3];
   const userId = process.argv[4];
-  let privateKey = process.argv[5];
+  const privateKey = process.argv[5];
 
   if (stage !== 'DEV' && stage !== 'PROD') {
     console.log('stage must be in DEV or PROD.');
     return;
-  }
-
-  if (!privateKey) {
-    const account = ainUtil.createAccount();
-    privateKey = account.private_key;
-
-    console.log('\nNew ain account created!');
-    console.log(account);
-    console.log();
-  } else {
-    let isValid = false;
-    try {
-      isValid = ainUtil.isValidPrivate(privateKey);
-    } catch (error) {}
-    if (!isValid) {
-      console.log('Private key is invalid. Please check private key.');
-      return;
-    }
   }
 
   const ainftJs = new AinftJs(
@@ -82,9 +64,8 @@ const usage = () => {
       'It is recommended to use the userId of the place where ainft-js is used.'
   );
   console.log(
-    '<PRIVATE_KEY> (optional): It means ain blockchain private key. If not entered, it will be created automatically.\n'
+    '<PRIVATE_KEY>: It means ain blockchain private key. The private key should be kept safe to be used for accessing AINFT Server APIs with the app id\n'
   );
-  console.log('Example: node create-ainft-server-app.js DEV new_app myUserId');
   console.log(
     'Example: node create-ainft-server-app.js DEV new_app myUserId ' +
       '50f561d8a2083d325973bac01b313b05d0466f9e786cb3cb7350b8d2eed7b383'
