@@ -12,6 +12,9 @@ export const ready = () => {
 
       await Promise.all(
         client.guilds.cache.map(async (guild) => {
+          if (!(await ainftFactory.isConnected(guild.id))) {
+            await ainftFactory.connectServerToApp(guild.id);
+          }
           console.log(guild.id, guild.name, ainftFactory.appId);
           ainftFactory.loadTaskConfig(guild.id);
         })
