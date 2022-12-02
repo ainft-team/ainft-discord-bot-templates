@@ -1,5 +1,4 @@
 const AinftJs = require('@ainft-team/ainft-js').default;
-const ainUtil = require('@ainblockchain/ain-util');
 
 const ainftServerEndpoint = {
   DEV: 'https://ainft-api-dev.ainetwork.ai',
