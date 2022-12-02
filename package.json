@@ -12,15 +12,15 @@
     "dev": "ts-node-dev ./src/index.ts"
   },
   "dependencies": {
-    "@ainft-team/ainft-js": "^0.4.2",
+    "@ainft-team/ainft-js": "^0.4.8",
     "@discordjs/builders": "^1.0.0",
     "@discordjs/rest": "^1.0.0",
     "discord.js": "13.9.1",
     "dotenv": "^16.0.1",
-    "moment": "^2.29.4",
-    "typescript": "^4.7.4"
+    "moment": "^2.29.4"
   },
   "devDependencies": {
-    "ts-node-dev": "^2.0.0"
+    "ts-node-dev": "^2.0.0",
+    "typescript": "4.7.4"
   }
 }
