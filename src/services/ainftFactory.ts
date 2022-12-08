@@ -23,6 +23,15 @@ export class AinftFactory {
     return this.ainftJs.discord.connectDiscordWithApp(this.appId, serverId);
   }
 
+  async isConnected(serverId: string) {
+    return this.ainftJs.discord
+      .getConnectedApp(serverId, this.appId)
+      .catch((error) => {
+        console.error(error);
+        return null;
+      });
+  }
+
   async getEventsByServer(appId: string, serverId: string) {
     return this.ainftJs.discord
       .getConnectedEventsByServer(appId, serverId)

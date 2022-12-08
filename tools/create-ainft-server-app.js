@@ -1,5 +1,4 @@
 const AinftJs = require('@ainft-team/ainft-js').default;
-const ainUtil = require('@ainblockchain/ain-util');
 
 const ainftServerEndpoint = {
   DEV: 'https://ainft-api-dev.ainetwork.ai',
@@ -40,12 +39,12 @@ const main = async () => {
 
   try {
     await ainftJs.auth.initializeApp(appId, userId);
+    console.log('\nThe app has been created successfully.\n');
   } catch (error) {
     console.error('Ainft server app creation failed.');
     console.error(error);
   }
 
-  console.log('\nThe app has been created successfully.\n');
 };
 
 const usage = () => {

@@ -2,7 +2,7 @@
 This is an ainft factory discord bot template that supports simple features related to tokenomics.
 
 ## Requirements
-- node >= 16.6
+- node >= 16.9
 - ainft server app  
   - If you do not have the nft server app, run [tools/create-ainft-server-app.js](https://github.com/ainft-team/ainft-discord-bot-templates/blob/main/tools/create-ainft-server-app.js).
 
